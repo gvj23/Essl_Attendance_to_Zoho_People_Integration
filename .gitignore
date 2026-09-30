@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+
+# Runtime files
+cookies.txt
+*.pid
+*.sock
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Python cache
+.pytest_cache/
+
+# Generated reports
+reports/
+*.xlsx
+*.csv
+
+# Local backups
+*_backup/
+*.bak
+
+# Secrets / credentials
+secrets/
+credentials/
+token.json

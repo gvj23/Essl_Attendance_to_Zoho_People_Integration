@@ -64,15 +64,15 @@ cursor = conn.cursor(dictionary=True)
 
 from datetime import datetime, timedelta
 
-#yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
-
+yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
 
 cursor.execute("""
 SELECT *
 FROM zoho_ready_logs
 WHERE sync_status = 'pending'
+AND DATE(attendance_date) = %s
 ORDER BY attendance_date ASC, id ASC
-""")
+""", (yesterday,))
 
 rows = cursor.fetchall()
 

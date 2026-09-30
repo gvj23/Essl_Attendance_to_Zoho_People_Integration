@@ -41,13 +41,12 @@ print("=======================\n")
 
 
 # FETCH FROM MSSQL
-query="""
-SELECT
+query="""SELECT
     EmployeeCode,
     LogDateTime,
     Direction
 FROM Atten_Logs
-WHERE CAST(LogDateTime AS DATE) = '2026-09-28'
+WHERE LogDateTime >= DATEADD(day,-2,GETDATE())
 ORDER BY LogDateTime ASC;
 """
 
